@@ -2,7 +2,7 @@ import hashlib
 
 num = 0
 code = ''
-code2 = [None, None, None, None, None, None, None, None]
+code2 = [None for _ in range(8)]
 while True:
     door = 'abbhdwsy'
     door += str(num)
