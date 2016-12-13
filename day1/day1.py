@@ -1,4 +1,4 @@
-with open('day1input.txt')as f:
+with open('input.txt')as f:
     turns = f.read().split(', ')
 
 position = 0 + 0j
