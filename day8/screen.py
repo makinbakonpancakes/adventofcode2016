@@ -10,6 +10,7 @@ class Screen:
         self.pixles = np.zeros((h, w))
 
     def command(self, cmd):
+        """Handles any of the three alloed commands."""
         ex = r'(rect|rotate row|rotate column) ((\d+)x(\d+)|.+=(\d+) by (\d+))'
         m = re.match(ex, cmd)
         m.group(3)
@@ -34,6 +35,7 @@ class Screen:
         self.pixles[a, :] = np.roll(self.pixles[a, :], b)
 
     def lights_on(self):
+        """How many lights are on?"""
         return self.pixles.sum()
 
     def __str__(self):

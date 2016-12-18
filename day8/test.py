@@ -47,6 +47,14 @@ class TestScreen(unittest.TestCase):
                       .......""".replace(" ", "")
         self.assertEqual(str(self.screen), expected)
 
+    def test_command_shift(self):
+        self.screen.command("rect 3x2")
+        self.screen.command("rotate row y=0 by 2")
+        expected = """..###..
+                      ###....
+                      .......""".replace(" ", "")
+        self.assertEqual(str(self.screen), expected)
+
 
 if __name__ == '__main__':
     unittest.main()
